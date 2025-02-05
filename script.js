@@ -2,6 +2,17 @@ const searchInput = document.getElementById('search-input');
 const resultArtist = document.getElementById('result-artist');
 const resultPlaylist = document.getElementById('result-playlists');
 
+/*DATA MODEL*/
+function requestApi(searchTerm) {
+    const url = `http://localhost:3000/artists?name_like=${searchTerm}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            displayResults(result);
+            console.log(result);
+        })
+        .catch(err => console.log(err));
+}
 
 /*CONTROLLER*/
 document.addEventListener('input', () => {
@@ -16,16 +27,7 @@ document.addEventListener('input', () => {
     requestApi(searchTerm);
 });
 
-/*DATA MODEL*/
-function requestApi(searchTerm) {
-    const url = `http://localhost:3000/artists?name_like=${searchTerm}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            displayResults(result);
-        })
-        .catch(err => console.log(err));
-}
+
 
 /*VIEW*/
 function displayResults(result) {
