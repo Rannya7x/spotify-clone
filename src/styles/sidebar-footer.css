@@ -3,10 +3,6 @@ body{
     font-family: var(--font-dm-sans);
 }
 .sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
     padding: 12px;
     width: 300px;
 }
@@ -15,15 +11,7 @@ body{
     border-radius: 8px;
     padding: 0 0 0 16px;
 }
-.logo{
-    background: #121212;
-    display: flex;
-    border-radius: 8px;
-    padding: 16px 0 0 16px;
-}
-.sidebar__navigation .logo img{
-    width: 80px;
-}
+
 
 .sidebar nav ul{
     margin-top: 20px;

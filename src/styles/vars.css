@@ -4,5 +4,8 @@
 
     /* COLORS */
     --bg-icon: #131313;
+    --bg-search: #252525;  
+    --input-color: #ffffffc2; 
     --bg-arrow-color: rgba(0,0,0,07)
+ 
 }
