@@ -1,7 +1,6 @@
 .sidebar{
     padding: 0 0.5rem;
     width: 33vw;
-    height: 75vh;
 }
 
 .library{
@@ -157,33 +156,39 @@
     border-radius: 20px;
 }
 footer{
-    width: 99vw;
-    position: fixed;
-    bottom: 0.4rem;
-    left: 0.5rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 98.9vw;
+    height: 10.70vh;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
     background: linear-gradient(90deg, rgb(180, 14, 177) 0%, rgb(18, 21, 184) 100%);
 }
 footer .footer__content{
     display: flex;
     flex-direction: column;
-    margin: 10px 30px;
+    margin-left: 0.9rem;
 }
 .footer__content .text{
     color: #fff;
     font-size: 12px;
-    margin-bottom: 10px;
 }
 .footer__content .title{
     color: #fff;
-    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+.footer__content .paragraph{
+    font-size: 0.99rem;
 }
 footer .footer__button{
     background-color: white;
     margin: 10px 30px;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 3rem;
+    padding: 10px 40px;
+    height: 70%;
 }
 footer .footer__button span{
     font-weight: 700;
