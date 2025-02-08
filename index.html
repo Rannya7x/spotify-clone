@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoticlone</title>
+    <link rel="icon" type="image/x-icon" href="./src/assets/icons/favicon.png">
     <link rel="stylesheet" href="./src/styles/vars.css">
     <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="./src/styles/media-queries.css">
     <link 
         rel="stylesheet" 
         href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
@@ -17,28 +21,53 @@
     
 </head>
 <body>
-    <div class="sidebar">
-        <nav class="sidebar__navigation">
-            <div class="logo">
-                <a>
-                    <img src="./src/assets/icons/logo-spotify.png" alt="logo do spotify">
-                </a>
-            </div>
-            <ul>
-                <li>
+    <header>
+        <nav class="header__navigation">
+            <ul class="navigation-container">
+                <li class="logo">
                     <a href="http://">
-                        <span class="fa fa-home"></span>
-                        <span>Inicio</span>
+                        <img src="./src/assets/icons/spotify-brands-solid.svg" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="home-link">
                     <a href="http://">
-                        <span class="fa fa-search"></span>
-                        <span>Buscar</span>
+                        <span class="fa fa-home"></span>
                     </a>
                 </li>
             </ul>
+            <div class="header__search">
+                <img src="./src/assets/icons/search.png" alt="">
+                <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+                <a class="explore-link" href="http://">
+                    <span class="fa fa-list"></span>
+                </a>
+            </div>
         </nav>
+        <nav class="header__navigation">
+            <ul class="navigation-container">
+                <li class="premium-link">
+                    <a href="">Premium</a>
+                </li>
+                <li class="suport-link">
+                    <a href="">Suporte</a>
+                </li>
+                <li class="download-link">
+                    <a href="">Baixar</a>
+                </li>
+                <li class="app-link">
+                    <a href="">
+                        <img src="./src/assets/icons/circle-arrow-down-solid.svg" alt="">
+                        <span>Instalar aplicativo</span>
+                    </a>
+                </li>
+            </ul>   
+            <div class="header__login">
+                <button class="subscribe">Inscreva-se</button>
+                <button class="login">Entrar</button>
+            </div>
+        </nav>
+    </header>
+    <div class="sidebar"> 
         <div class="library">
             <div class="library__content">
                 <button class="library__button">
@@ -55,7 +84,20 @@
                         <span>Criar playlist</span>
                     </button>
                 </div>
+                <div class="section__playlist__content">
+                    <span class="text title">Que tal seguir um podcast novo?</span>
+                    <span class="text subtitle">Avisaremos você sobre novos episódios</span>
+                    <button class="section__playlist__button">Explore podcasts</button>
+                </div>
             </section>
+            <ul class="library__navigation">
+                <li><a href="">Legal</a></li>
+                <li><a href="">Segurança e Centro de privacidade</a></li>
+                <li><a href="">Política de privacidade</a></li>
+                <li><a href="">Configurações de cookies</a></li>
+                <li><a href="">Sobre anúncios</a></li>
+                <li><a href="">Acessibilidade</a></li>
+            </ul>
             <div class="cookies">
                 <a href="/">Cookies</a>
             </div>
@@ -69,24 +111,6 @@
     </div>
     <main>
         <div class="main-container">
-            <nav class="header__navigation">
-                <div class="navigation">
-                    <button class="arrow-left">
-                        <img src="./src/assets/icons/small-left.png" alt="Seta para esquerda">
-                    </button>
-                    <button class="arrow-right">
-                        <img src="./src/assets/icons/small-right.png" alt="Seta para direita">
-                    </button>
-                </div>
-                <div class="header__search">
-                    <img src="./src/assets/icons/search.png" alt="">
-                    <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
-                </div>
-                <div class="header__login">
-                    <button class="subscribe">Inscreva-se</button>
-                    <button class="login">Enter</button>
-                </div>
-            </nav>
             <div class="playlist-container">
                 <div id="result-playlists">
                     <div class="playlist">
@@ -144,6 +168,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="result-artist" class="hidden">
+                    <div class="grid-container">
+                        <div class="artist-card" id="">
+                            <div class="card-img">
+                                <img src="" alt="" id="artist-img" class="artist-img"></img>
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <a title="Foo Fighters" class="vst" href="/"></a>                       
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-category"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main> 
@@ -156,5 +198,6 @@
             <span>Inscreva-se grátis</span>
         </button>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
