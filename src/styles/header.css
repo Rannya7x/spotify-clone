@@ -7,7 +7,7 @@ header{
   .header__navigation{
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: 10.11vh;
   }
   
   .header__navigation .navigation-container{
