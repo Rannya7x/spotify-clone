@@ -1,6 +1,25 @@
 @media screen and (max-width: 1015px) {
   .offer__list-item {
     grid-template-columns: 1fr 1fr;
+  }   
+}
+/* ARTISTS CONTAINER */
+@media screen and (max-width: 1230px) {
+  .header__search{
+    max-width: 53px;
+    transition: max-width 2.5s ease;
   }
-    
+}
+@media screen and (max-width: 1262px){
+  .header__search{
+      width: 75%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .premium-link, .header__navigation .navigation-container .download-link, .support-link{
+    display: none;
+  }
+  .nav-bars {
+    display: flex;
+  }
 }
