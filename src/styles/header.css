@@ -1,6 +1,7 @@
 /* HEADER */
 header{
     width: 100%;
+    min-width: auto;
     display: flex;
     justify-content: space-between;
     padding: 0.4rem;
