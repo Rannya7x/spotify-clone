@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
   }   
 }
+
 /* ARTISTS CONTAINER */
 @media screen and (max-width: 1230px) {
   .header__search{
@@ -21,5 +22,16 @@
   }
   .nav-bars {
     display: flex;
+  }
+}
+
+@media screen and (min-height: 986px) {
+  .section__playlist{
+    justify-content: flex-start; 
+  }
+}
+@media screen and (min-height: 724px) {
+  .library__navigation{
+    margin-top: auto;
   }
 }
