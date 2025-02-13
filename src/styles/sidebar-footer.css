@@ -161,6 +161,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     width: 98.9vw;
+    min-width: 611px;
     height: 10.70vh;
     margin-top: 0.5rem;
     margin-right: auto;
