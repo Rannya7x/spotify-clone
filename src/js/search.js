@@ -15,16 +15,18 @@ function requestApi(searchTerm) {
 }
 
 /*CONTROLLER*/
-document.addEventListener('input', () => {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+export const initSearch = () => {
+    document.addEventListener('input', () => {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
 
-    if (searchTerm === '') {
-        resultPlaylist.classList.remove('hidden');
-        return;
-    };
+        if (searchTerm === '') {
+            resultPlaylist.classList.remove('hidden');
+            return;
+        };
 
-    requestApi(searchTerm);
-});
+        requestApi(searchTerm);
+    });
+}
 
 /*VIEW*/
 function displayResults(result) {
@@ -38,11 +40,3 @@ function displayResults(result) {
     });
     resultArtist.classList.remove('hidden'); 
 }
-
-/*SHADOW EFFECT*/
-const shadowDiv = document.querySelector('.library__content');
-const scrollableDiv = document.querySelector('.section__playlist');
-
-scrollableDiv.addEventListener('scroll', () => {
-    shadowDiv.classList.toggle("scrolled", scrollableDiv.scrollTop > 0);
-});
