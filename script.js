@@ -26,8 +26,6 @@ document.addEventListener('input', () => {
     requestApi(searchTerm);
 });
 
-
-
 /*VIEW*/
 function displayResults(result) {
     resultPlaylist.classList.add('hidden');
@@ -40,3 +38,11 @@ function displayResults(result) {
     });
     resultArtist.classList.remove('hidden'); 
 }
+
+/*SHADOW EFFECT*/
+const shadowDiv = document.querySelector('.library__content');
+const scrollableDiv = document.querySelector('.section__playlist');
+
+scrollableDiv.addEventListener('scroll', () => {
+    shadowDiv.classList.toggle("scrolled", scrollableDiv.scrollTop > 0);
+});
