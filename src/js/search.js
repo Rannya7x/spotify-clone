@@ -15,18 +15,18 @@ function requestApi(searchTerm) {
 }
 
 /*CONTROLLER*/
-document.addEventListener('input', () => {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+export const initSearch = () => {
+    document.addEventListener('input', () => {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
 
-    if (searchTerm === '') {
-        resultPlaylist.classList.remove('hidden');
-        return;
-    };
+        if (searchTerm === '') {
+            resultPlaylist.classList.remove('hidden');
+            return;
+        };
 
-    requestApi(searchTerm);
-});
-
-
+        requestApi(searchTerm);
+    });
+}
 
 /*VIEW*/
 function displayResults(result) {
