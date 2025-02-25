@@ -1,0 +1,34 @@
+{
+    "singles": [
+      {
+        "id": 1,
+        "name": "Triunfo",
+        "artistId": 3,
+        "urlImg": "https://i.scdn.co/image/ab67616100005174c884df599abc793c116cdf15"
+      },
+      {
+        "id": 2,
+        "name": "Thriller",
+        "artistId": 2,
+        "urlImg": "https://example.com/thriller.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Everlong",
+        "artistId": 1,
+        "urlImg": "https://i.scdn.co/image/ab67616d00001e026b0723e4e3a86a6a5a0f3c0a"
+      },
+      {
+        "id": 4,
+        "name": "Evidências",
+        "artistId": 4,
+        "urlImg": "https://i.scdn.co/image/ab67616d00001e02b8a3e2a3d7d7a7b3d7b7a3b5"
+      },
+      {
+        "id": 5,
+        "name": "Bumbum de Ouro",
+        "artistId": 5,
+        "urlImg": "https://i.scdn.co/image/ab67616d00001e02fe8f6dd361ad0f12b88c7f56"
+      }
+    ]
+  }
