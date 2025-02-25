@@ -1,6 +1,6 @@
 export const fetchArtists = async () => {
     try{
-        const response = await fetch('../../api-artists/artists.json');
+        const response = await fetch('../../api/artists.json');
         const data = await response.json();
         renderArtists(data.artists);
     } catch (error) {
@@ -9,7 +9,7 @@ export const fetchArtists = async () => {
 };
 
 export const renderArtists = (artists) => {
-    const containerRow = document.querySelector('.container__row');
+    const containerRow = document.querySelector('#artists-row');
     containerRow.innerHTML = '';
 
     artists.forEach(artist => {
