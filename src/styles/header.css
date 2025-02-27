@@ -34,21 +34,39 @@ header{
     height: 2.7rem;
     background-color: var(--bg-search);
     border-radius: 100%;
+    transition: transform 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;  
+    transition: background-color 0.2s ease-in-out; 
   }
   
   .header__navigation ul .home-link .fa-home{
-    color: #fff;
+    color: var(--input-color);
     font-size: 1.5rem;
   }
+  .header__navigation ul .home-link:hover{
+    transform: scale(1.05);
+    background-color: rgb(60, 60, 60);
+  }
+
   
 .header__navigation .header__search{
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: var(--bg-search);
     border-radius: 1.5rem;
     width: 35vw;
+    transition: background-color 0.3s ease-in-out;
+    transition: outline 0.2s ease-in-out;
+}
+.header__navigation .header__search:hover{
+  background-color: rgb(64, 64, 64);
+  outline: 1px solid rgb(75, 75, 75);
+}
+.header__navigation .header__search:focus{
+  outline: 2.5px solid #fff;
+  outline-offset: -2.5px;
 }
 
   .header__navigation .header__search #search-input{
@@ -56,7 +74,9 @@ header{
     background: transparent;
     border: none;
     font-size: 1rem;
+    color: #fff;
     margin-left: 0.5rem;
+    outline: none;
   }
   .header__navigation .header__search #search-input::placeholder{
     color: var(--input-color);
