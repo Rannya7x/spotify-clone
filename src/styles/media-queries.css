@@ -4,20 +4,32 @@
   }   
 }
 
-/* ARTISTS CONTAINER */
-@media screen and (max-width: 1230px) {
-  .header__search{
-    max-width: 53px;
-    transition: max-width 2.5s ease;
+
+/*Header*/
+@media screen and (max-width: 1150px) {
+  .header__navigation .header__search{
+    width: 12vw;
+    min-width: 12vw;
+    transition: width .3s ease;
   }
-}
-@media screen and (max-width: 1262px){
-  .header__search{
-      width: 75%;
+  .header__navigation .header__search #search-input, .header__navigation .header__search .explore-link{
+    display: none;
+    transition: display .3s ease;
+  }
+  .flex-grow{
+    flex-grow: 0;
+  }
+  .header__navigation .header__search:focus #search-input, .header__navigation .header__search:focus .explore-link{
+    display: flex;
+    transition: display .3s ease;
+  }
+  .header__navigation .header__search:focus{
+    width: fit-content;
+    transition: width 3s ease;
   }
 }
 @media screen and (max-width: 860px) {
-  .premium-link, .header__navigation .navigation-container .download-link, .support-link{
+  nav.header__navigation .navigation-container__links{
     display: none;
   }
   .nav-bars {
