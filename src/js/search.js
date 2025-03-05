@@ -1,6 +1,7 @@
 const searchInput = document.getElementById('search-input');
 const resultArtist = document.getElementById('result-artist');
 const resultPlaylist = document.getElementById('result-playlists');
+const mainContent = document.getElementById('main-container');
 
 /*DATA MODEL*/
 function requestApi(searchTerm) {
@@ -16,21 +17,22 @@ function requestApi(searchTerm) {
 
 /*CONTROLLER*/
 export const initSearch = () => {
-    document.addEventListener('input', () => {
-        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
 
         if (searchTerm === '') {
+            resultArtist.classList.add('hidden');
             resultPlaylist.classList.remove('hidden');
             return;
         };
 
         requestApi(searchTerm);
     });
-}
+};
 
 /*VIEW*/
 function displayResults(result) {
-    resultPlaylist.classList.add('hidden');
+    mainContent.classList.add('hidden');
     const artistName = document.getElementById('artist-name');
     const artistImage = document.getElementById('artist-img');
 
