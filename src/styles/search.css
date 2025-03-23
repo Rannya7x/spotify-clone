@@ -1,0 +1,44 @@
+/*SEARCH TAGS*/
+.search-tags{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+  
+  .search-tags-item{
+    display: block;
+    padding: 0.5rem 0.9rem;
+    background-color: #282828;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .search-tags-item a{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .search-tags-item:hover{
+    background-color: #333333;
+  }
+  .active-tag{
+    background-color: #fff;
+  }
+  .active-tag a{
+    color: #121212;
+  }
+  .active-tag:hover{
+    background-color: #f0eded;
+  }
+
+/*MAIN SEARCH RESULT*/
+
+.main-search-result{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3.5rem;
+}
+.main-card{
+    
+}

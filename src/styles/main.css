@@ -181,12 +181,16 @@ main{
   overflow: hidden;
 }
 
-.playlist-container{
-    top: 2.7rem;
-    left: 25rem;
-    height: 100%;    
-    padding: 16px;
+#playlist-container{
+  width: 100%;
+  top: 2.7rem;
+  left: 25rem;
+  height: 100%;    
+  padding: 16px;
+  background-color: #121212;
+  border-radius: 8px;
 }
+
 
 .playlist{
     margin: 24px;
@@ -357,7 +361,8 @@ main{
     cursor: pointer;
   }
   
-  #result-artist {
+  #search-result {
     padding: 20px 40px;
   }
+  
 
